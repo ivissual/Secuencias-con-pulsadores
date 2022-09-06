@@ -1,3 +1,96 @@
+from machine import Pin
+from utime import sleep_ms, sleep
+P1=Pin (2, Pin.IN)
+P2=Pin (16, Pin.IN)
+P3=Pin (5, Pin.IN)
+P4=Pin (19, Pin.IN)
+
+led1=Pin (15, Pin.OUT)
+led2=Pin (4, Pin.OUT)
+led3=Pin (17, Pin.OUT)
+led4=Pin (18, Pin.OUT)
+led5=Pin (12, Pin.OUT)
+led6=Pin (27, Pin.OUT)
+led7=Pin (33, Pin.OUT)
+led8=Pin (25, Pin.OUT)
+led9=Pin (26, Pin.OUT)
+led10=Pin (14, Pin.OUT)
+
+todos=[led1, led2, led3, led4, led5, led6, led7, led8, led9, led10]
+
+SecVa1 = [led1, led10, led2, led9, led3, led8, led4, led7, led5, led6]
+SecVa2 = [led2, led3, led1, led4, led6, led7, led5, led8, led9, led7, led10]
+SecVa3 = [led6, led5, led4, led7, led3, led8, led2, led9, led1, led10]
+SecVa4 = [led8, led2, led9, led1, led10, led6, led5, led4, led7, led3]
+SecVa5 = [led4, led7, led3, led1, led10, led6, led5, led8, led2, led9]
+SecVa6 = [led1, led2, led9, led10, led3, led4, led7, led8, led5, led6]
+
+def RastroHD():
+    for i in todos:
+        i.value(not i.value())
+        sleep_ms(250)
+        
+def UnoxUnoD():
+    for elem in todos:
+        elem.value(1)
+        sleep_ms(300)
+        elem.value(0)
+        sleep_ms(300)
+        
+def RastroHI():
+    for i in reversed(todos):
+        i.value(not i.value())
+        sleep_ms(250)
+
+def UnoxUnoI():
+    for elem in reversed (todos):
+        elem.value(1)
+        sleep_ms(300)
+        elem.value(0)
+        sleep_ms(300)
+        
+def print_led(a, b, c, d, e, f, g, h, i, j):
+            led1.value(a)
+            led2.value(b)
+            led3.value(c)
+            led4.value(d)
+            led5.value(e)
+            led6.value(f)
+            led7.value(g)
+            led8.value(h)
+            led9.value(i)
+            led10.value(j)
+            sleep_ms(300)
+            
+def SecVa1 ():
+    for i in LEDSsec:
+        i.value(not i.value())
+        sleep_ms(250)
+   
+def SecVa2 ():
+    for i in LEDS7_8:
+        i.value(not i.value())
+        sleep_ms(250)
+
+def SecVa3 ():
+    for i in LEDS9_10:
+        i.value(not i.value())
+        sleep_ms(250)
+        
+def SecVa4 ():
+    for i in LEDS11_12:
+        i.value(not i.value())
+        sleep_ms(250)
+        
+def SecVa5 ():
+    for i in LEDS13_14:
+        i.value(not i.value())
+        sleep_ms(250)
+        
+def SecVa6 ():
+    for i in LEDS15_16:
+        i.value(not i.value())
+        sleep_ms(250)
 while True:
     print (f"P1: {P1.value()} P2: {P2.value()} P3: {P3.value()} P4: {P4.value()} ")
     dato= int (P1.value())*8+int (P2.value())*4+int (P3.value())*2+int (P4.value())
