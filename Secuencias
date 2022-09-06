@@ -1,0 +1,72 @@
+while True:
+    print (f"P1: {P1.value()} P2: {P2.value()} P3: {P3.value()} P4: {P4.value()} ")
+    dato= int (P1.value())*8+int (P2.value())*4+int (P3.value())*2+int (P4.value())
+    print (f"El dato es {dato}")
+    while (dato == 1):
+        sleep(0.8)
+        if ((int (P1.value())*8+int (P2.value())*4+int (P3.value())*2+int (P4.value()))!=15 and (int (P1.value())*8+int (P2.value())*4+int (P3.value())*2+int (P4.value()))!=1):
+            dato = not dato
+    sleep_ms(300)
+    
+    if (dato==15):
+        UnoxUnoI()
+                
+    if (dato==7):
+        RastroHD()
+    
+    if (dato==13):
+        UnoxUnoD()
+        
+    if (dato==11):
+        RastroHI()
+        
+    if (dato==12):
+        print_led(0,1,0,1,0,1,0,1,0,1)
+        print_led(1,0,1,0,1,0,1,0,1,0)
+        
+    if (dato==3):
+        print_led(0,0,1,1,0,0,1,1,0,0)
+        print_led(1,1,0,0,1,1,0,0,1,1)
+        
+    if (dato==10):
+        print_led(1,0,0,1,0,0,1,0,0,1)
+        print_led(0,1,1,0,1,1,0,1,1,0)
+        
+    if (dato==6):
+        print_led(1,0,0,0,0,0,0,0,0,1)
+        print_led(0,1,0,0,0,0,0,0,1,0)
+        print_led(0,0,1,0,0,0,0,1,0,0)
+        print_led(0,0,0,1,0,0,1,0,0,0)
+        print_led(0,0,0,0,1,1,0,0,0,0)
+       
+    if (dato==8):
+        print_led(0,0,0,0,0,0,0,0,0,1)
+        print_led(0,0,0,0,0,0,0,0,1,1)
+        print_led(0,0,0,0,0,0,0,1,1,0)
+        print_led(0,0,0,0,0,0,1,1,0,0)
+        print_led(0,0,0,0,0,1,1,0,0,0)
+        print_led(0,0,0,0,1,1,0,0,0,0)
+        print_led(0,0,0,1,1,0,0,0,0,0)
+        print_led(0,0,1,1,0,0,0,0,0,0)
+        print_led(0,1,1,0,0,0,0,0,0,0)
+        print_led(1,1,0,0,0,0,0,0,0,0)
+        print_led(1,0,0,0,0,0,0,0,0,0)
+        print_led(0,0,0,0,0,0,0,0,0,0)
+    
+    if (dato==9):
+        SecVa1()
+     
+    if (dato==14):
+        SecVa2()
+        
+    if (dato==5):
+        SecVa3()
+        
+    if (dato==0):
+        SecVa4()
+        
+    if (dato==4):
+        SecVa5()
+        
+    if (dato==2):
+        SecVa6()
